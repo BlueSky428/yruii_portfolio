@@ -1,0 +1,363 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Yurii's Portfolio Design System - Modern & Smart Aesthetics */
+
+@layer base {
+  :root {
+    /* Core Background & Text - Modern Light */
+    --background: 0 0% 100%;
+    --foreground: 222 47% 11%;
+
+    /* Cards & Surfaces - Glassmorphism */
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+
+    /* Popover Elements */
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+
+    /* Primary - Modern Cyan/Blue */
+    --primary: 217 91% 60%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 217 91% 70%;
+
+    /* Secondary - Modern Purple */
+    --secondary: 262 83% 58%;
+    --secondary-foreground: 0 0% 100%;
+    --secondary-glow: 262 83% 68%;
+
+    /* Muted - Subtle Gray */
+    --muted: 220 14% 96%;
+    --muted-foreground: 220 9% 46%;
+
+    /* Accent - Modern Pink */
+    --accent: 330 81% 60%;
+    --accent-foreground: 0 0% 100%;
+
+    /* Status Colors */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Borders & Inputs - Refined */
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 217 91% 60%;
+
+    /* Design Tokens - Modern Radius */
+    --radius: 1rem;
+
+    /* Custom Gradients - Modern Tech */
+    --gradient-hero: linear-gradient(135deg, hsl(217, 91%, 60%) 0%, hsl(262, 83%, 58%) 50%, hsl(330, 81%, 60%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(0, 0%, 100%) 0%, hsl(220, 14%, 96%) 100%);
+    --gradient-accent: linear-gradient(90deg, hsl(330, 81%, 60%) 0%, hsl(217, 91%, 60%) 100%);
+
+    /* Shadows - Modern & Subtle */
+    --shadow-soft: 0 2px 8px -2px rgba(0, 0, 0, 0.08);
+    --shadow-glow: 0 8px 32px -8px hsl(217, 91%, 60% / 0.25);
+    --shadow-card: 0 4px 16px -4px rgba(0, 0, 0, 0.1);
+
+    /* Animations - Smooth & Modern */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Core Background & Text - Modern Dark */
+    --background: 222 47% 11%;
+    --foreground: 213 31% 91%;
+
+    /* Cards & Surfaces - Glassmorphism Dark */
+    --card: 222 47% 15%;
+    --card-foreground: 213 31% 91%;
+
+    /* Popover Elements - Dark */
+    --popover: 222 47% 13%;
+    --popover-foreground: 213 31% 91%;
+
+    /* Primary - Modern Cyan/Blue (Dark) */
+    --primary: 217 91% 60%;
+    --primary-foreground: 222 47% 11%;
+    --primary-glow: 217 91% 70%;
+
+    /* Secondary - Modern Purple (Dark) */
+    --secondary: 262 83% 58%;
+    --secondary-foreground: 222 47% 11%;
+    --secondary-glow: 262 83% 68%;
+
+    /* Muted - Subtle Dark */
+    --muted: 217 33% 17%;
+    --muted-foreground: 215 20% 65%;
+
+    /* Accent - Modern Pink (Dark) */
+    --accent: 330 81% 60%;
+    --accent-foreground: 222 47% 11%;
+
+    /* Status Colors - Dark */
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Borders & Inputs - Refined Dark */
+    --border: 217 33% 17%;
+    --input: 217 33% 17%;
+    --ring: 217 91% 60%;
+
+    /* Custom Gradients - Modern Tech Dark */
+    --gradient-hero: linear-gradient(135deg, hsl(217, 91%, 60%) 0%, hsl(262, 83%, 58%) 50%, hsl(330, 81%, 60%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(222, 47%, 15%) 0%, hsl(217, 33%, 17%) 100%);
+    --gradient-accent: linear-gradient(90deg, hsl(330, 81%, 60%) 0%, hsl(217, 91%, 60%) 100%);
+
+    /* Shadows - Modern & Enhanced Dark */
+    --shadow-soft: 0 4px 16px -4px rgba(0, 0, 0, 0.4);
+    --shadow-glow: 0 8px 32px -8px hsl(217, 91%, 60% / 0.3);
+    --shadow-card: 0 6px 24px -6px rgba(0, 0, 0, 0.3);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    scroll-behavior: smooth;
+    font-feature-settings: "rlig" 1, "calt" 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+    letter-spacing: -0.02em;
+    font-weight: 700;
+  }
+  
+  p {
+    line-height: 1.7;
+  }
+}
+
+@layer components {
+  /* Hero Gradient Background */
+  .hero-gradient {
+    background: var(--gradient-hero);
+    background-size: 200% 200%;
+    animation: gradient-shift 8s ease infinite;
+  }
+
+  /* Card Gradient */
+  .card-gradient {
+    background: var(--gradient-card);
+  }
+
+  /* Accent Gradient */
+  .accent-gradient {
+    background: var(--gradient-accent);
+  }
+
+  /* Floating Animation for Hero */
+  .float-animation {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  /* Particle Effects */
+  .particle {
+    position: absolute;
+    border-radius: 50%;
+    background: hsl(var(--primary) / 0.1);
+    animation: particle-float 20s linear infinite;
+  }
+
+  /* Smooth Hover Effects - Modern */
+  .hover-lift {
+    transition: var(--transition-smooth);
+    border: 1px solid hsl(var(--border));
+  }
+  
+  .hover-lift:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-glow);
+    border-color: hsl(var(--primary) / 0.3);
+  }
+
+  /* Glow Effect - Modern */
+  .glow-on-hover {
+    transition: var(--transition-smooth);
+  }
+  
+  .glow-on-hover:hover {
+    box-shadow: var(--shadow-glow);
+    transform: scale(1.05);
+  }
+  
+  /* Glassmorphism Effect */
+  .glass {
+    background: hsl(var(--card) / 0.8);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid hsl(var(--border) / 0.5);
+  }
+  
+  /* Modern Card Style */
+  .modern-card {
+    background: hsl(var(--card));
+    border: 1px solid hsl(var(--border));
+    border-radius: var(--radius);
+    transition: var(--transition-smooth);
+  }
+  
+  .modern-card:hover {
+    border-color: hsl(var(--primary) / 0.4);
+    box-shadow: var(--shadow-card);
+  }
+
+  /* Section Fade In */
+  .fade-in-up {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.6s ease-out 0.2s forwards;
+  }
+
+  /* 3D Grid Background Effect - Modern */
+  .grid-3d {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .grid-3d::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+      linear-gradient(hsl(var(--primary) / 0.08) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(var(--primary) / 0.08) 1px, transparent 1px);
+    background-size: 50px 50px;
+    transform: perspective(500px) rotateX(60deg);
+    transform-origin: top;
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.6;
+  }
+
+  .grid-3d > * {
+    position: relative;
+    z-index: 1;
+  }
+
+  /* Enhanced 3D Grid for Hero - Modern */
+  .grid-3d-hero {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .grid-3d-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+      linear-gradient(hsl(var(--primary) / 0.12) 2px, transparent 2px),
+      linear-gradient(90deg, hsl(var(--primary) / 0.12) 2px, transparent 2px);
+    background-size: 60px 60px;
+    transform: perspective(800px) rotateX(70deg);
+    transform-origin: top;
+    animation: grid-float 10s ease-in-out infinite;
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.7;
+  }
+
+  .grid-3d-hero > * {
+    position: relative;
+    z-index: 1;
+  }
+}
+
+@keyframes gradient-shift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes particle-float {
+  0%, 100% { transform: translateY(0px) translateX(0px); opacity: 0; }
+  10%, 90% { opacity: 1; }
+  50% { transform: translateY(-100px) translateX(50px); }
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes grid-float {
+  0%, 100% { 
+    transform: perspective(800px) rotateX(70deg) translateY(0px);
+  }
+  50% { 
+    transform: perspective(800px) rotateX(70deg) translateY(-20px);
+  }
+}
+
+/* Modern Button Styles */
+@layer components {
+  .btn-modern {
+    @apply px-6 py-3 rounded-xl font-medium transition-all duration-300;
+    @apply shadow-lg hover:shadow-xl;
+    @apply transform hover:scale-105 active:scale-95;
+  }
+  
+  .btn-modern-primary {
+    @apply btn-modern bg-primary text-primary-foreground;
+    @apply hover:bg-primary-glow;
+    box-shadow: 0 4px 16px -4px hsl(var(--primary) / 0.4);
+  }
+  
+  /* Modern Text Gradients */
+  .text-gradient {
+    background: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--secondary)) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  /* Modern Section Spacing */
+  .section-modern {
+    @apply py-24 md:py-32;
+  }
+  
+  /* Modern Container */
+  .container-modern {
+    @apply container mx-auto px-4 md:px-6 lg:px-8;
+    max-width: 1280px;
+  }
+}

@@ -5,11 +5,18 @@ import { GraduationCap, Calendar, Award } from 'lucide-react'
 const EducationSection = () => {
   const education = [
     {
-      degree: "Bachelor of Computer Science",
-      institution: "Odesa National Polytechnic University",
-      period: "2011 - 2015",
-      description: "Specialized in Software Engineering and Web Technologies. Thesis focused on scalable web architectures and API design patterns.",
+      degree: "Bachelor's in Computer Science",
+      institution: "National Technical University of Ukraine 'Igor Sikorsky Kyiv Polytechnic Institute'",
+      period: "2014 - 2018",
+      description: "Completed a comprehensive 4-year program in Computer Science. Specialized in software engineering, web technologies, and computer systems. Located in Kyiv, Ukraine.",
       type: "BCompSc"
+    },
+    {
+      degree: "Bachelor of Science",
+      institution: "State University 'Lviv Polytechnics'",
+      period: "Ukraine",
+      description: "Bachelor of Science degree from one of Ukraine's leading technical universities, located in Lviv, Ukraine.",
+      type: "BSc"
     }
   ]
 
